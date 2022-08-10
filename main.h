@@ -158,6 +158,10 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 /* exec_line */
 int exec_line(data_shell *datash);
 
+int print_alias(data_of_program *data, char *alias);
+char *get_alias(data_of_program *data, char *name);
+int set_alias(char *alias_string, data_of_program *data);
+
 /* cmd_exec.c */
 int is_cdir(char *path, int *i);
 char *_which(char *cmd, char **_environ);
